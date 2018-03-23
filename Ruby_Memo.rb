@@ -1,56 +1,3 @@
-# ===========================================      RubyMine       ==============================================
-#Comment or uncomment  Ctrl+Slash -- Ctrl+Shift+Slash
-
-# ===========================================      Rspec          ==============================================
-
-## describe 
-#   permet de decrire une methode ou une classe:
-les classes -> par convention préfixé par un point .add
-les instances -> par convention préfixé par un dash #add
-describe ".add" do
- # code
-end
-
-# context
-#   sont utilisé pour decrire le context du test, c'est la meme chose que describe mais utilisé sous celle ci 
-#   pour plus de lisibilité
-
-describe ".add" do
-  context "given an empty string" do
-     # code
-  end
-end
-
-## it
-#   Permet de decrire un contexte de test concret 
-describe ".add" do
-  context "given an empty string" do
-    it "returns zero" do
-      # code
-    end
-  end
-end
-
-## expect(...).to  && expect(...).not_to 
-#   définir des attentes positives et négatives sur un objet
-describe StringCalculator do
-  describe ".add" do
-    context "given an empty string" do
-      it "returns zero" do
-        expect(StringCalculator.add("")).to eql(0)
-      end
-    end
-  end
-end
-
-
-## «let» et «let!»
-#   Permet de decrire un contexte de test concret 
-
-## subject
-#   permet d éviter la duplication de code.
-
-
 
 # ============================================    RUBY            ===================================================
 
@@ -711,8 +658,60 @@ lambda = # -> Verifie le nombre de parametre passé à une fontion
 # proc   = # -> La fonction peut en prendre plusieurs proc sans se soucier du nbr de param. que peut prendre cette methode
            # -> Retourn la valeur
 
+ # ===========================================      RubyMine       ==============================================
+#Comment or uncomment  Ctrl+Slash -- Ctrl+Shift+Slash
 
-# ==================================================================================================
+# ===========================================      Rspec          ==============================================
+
+## describe 
+#   permet de decrire une methode ou une classe:
+les classes -> par convention préfixé par un point .add
+les instances -> par convention préfixé par un dash #add
+describe ".add" do
+ # code
+end
+
+# context
+#   sont utilisé pour decrire le context du test, c'est la meme chose que describe mais utilisé sous celle ci 
+#   pour plus de lisibilité
+
+describe ".add" do
+  context "given an empty string" do
+     # code
+  end
+end
+
+## it
+#   Permet de decrire un contexte de test concret 
+describe ".add" do
+  context "given an empty string" do
+    it "returns zero" do
+      # code
+    end
+  end
+end
+
+## expect(...).to  && expect(...).not_to 
+#   définir des attentes positives et négatives sur un objet
+describe StringCalculator do
+  describe ".add" do
+    context "given an empty string" do
+      it "returns zero" do
+        expect(StringCalculator.add("")).to eql(0)
+      end
+    end
+  end
+end
+
+
+## «let» et «let!»
+#   Permet de decrire un contexte de test concret 
+
+## subject
+#   permet d éviter la duplication de code.
+
+
+
 
 # respond_to permet de savoir si on a bien passer un paramettre du type attendu 
 def convert_to_min(seconds)
